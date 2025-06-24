@@ -1,0 +1,239 @@
+/* Reset dan Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #0f0e17;
+    color: #fffffe;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styles */
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+    background: linear-gradient(135deg, #6e45e2 0%, #88d3ce 100%);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(110, 69, 226, 0.3);
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #fffffe;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.deskripsi {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Kalkulator Styles */
+.kalkulator {
+    background-color: #1a1a2e;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+}
+
+.input-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.input-bilangan {
+    flex: 1;
+    min-width: 200px;
+}
+
+.select-input {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 2px solid #6e45e2;
+    background-color: #16213e;
+    color: #fffffe;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.select-input:focus {
+    outline: none;
+    border-color: #88d3ce;
+    box-shadow: 0 0 0 3px rgba(136, 211, 206, 0.3);
+}
+
+.input-number {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 5px;
+    border: 2px solid #6e45e2;
+    background-color: #16213e;
+    color: #fffffe;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.input-number:focus {
+    outline: none;
+    border-color: #88d3ce;
+    box-shadow: 0 0 0 3px rgba(136, 211, 206, 0.3);
+}
+
+.operator {
+    flex: 0 0 60px;
+    text-align: center;
+}
+
+.operator .select-input {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 12px 5px;
+}
+
+/* Button Styles */
+.btn-hitung {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #6e45e2 0%, #88d3ce 100%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(110, 69, 226, 0.4);
+}
+
+.btn-hitung:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(110, 69, 226, 0.5);
+}
+
+.btn-hitung:active {
+    transform: translateY(0);
+}
+
+/* Hasil Styles */
+.hasil {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: rgba(26, 26, 46, 0.7);
+    border-radius: 10px;
+    border: 1px solid #6e45e2;
+}
+
+.hasil h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #88d3ce;
+}
+
+.hasil-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.hasil-item {
+    text-align: center;
+    padding: 15px;
+    background-color: #16213e;
+    border-radius: 5px;
+    border-bottom: 3px solid #6e45e2;
+}
+
+.hasil-item span {
+    display: block;
+    font-size: 0.9rem;
+    color: #88d3ce;
+    margin-bottom: 5px;
+}
+
+.hasil-value {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fffffe;
+}
+
+/* Panduan Styles */
+.panduan {
+    background-color: #1a1a2e;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.panduan h2 {
+    color: #88d3ce;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.panduan ol {
+    padding-left: 20px;
+}
+
+.panduan li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 15px;
+}
+
+.panduan li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 6px;
+    height: 6px;
+    background-color: #6e45e2;
+    border-radius: 50%;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .input-group {
+        flex-direction: column;
+    }
+    
+    .input-bilangan, .operator {
+        width: 100%;
+    }
+    
+    .operator .select-input {
+        width: 60px;
+        margin: 0 auto;
+    }
+    
+    .hasil-group {
+        grid-template-columns: 1fr;
+    }
+    
+    .header h1 {
+        font-size: 2rem;
+    }
+}
